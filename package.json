@@ -1,0 +1,26 @@
+{
+  "name": "vue-examples",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind-dev": "npx tailwindcss-cli@latest build ./assets/tailwind.css -c ./assets/tailwind.toggle.config.js -o ./website/public/css/default.css",
+    "tailwind-prod": "npx tailwindcss-cli@latest build ./assets/tailwind.css -c ./assets/tailwind.toggle.config.js -o ./website/public/css/default.css --purge=true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjowens/Vue-Examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjowens/Vue-Examples/issues"
+  },
+  "homepage": "https://github.com/jjowens/Vue-Examples#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "tailwindcss": "^2.1.2",
+    "vue": "^2.6.12"
+  }
+}

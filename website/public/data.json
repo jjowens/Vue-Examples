@@ -1,0 +1,18 @@
+{
+    "books" : [
+        {"title": "The Stand", "author": {"firstname": "Stephen", "lastname": "King"}, "genres": ["horror", "thriller"]},
+        {"title": "Jurassic Park", "author": {"firstname": "Michael", "lastname": "Crichton"}, "genres": ["adventure", "science fiction"]},
+        {"title": "The Drummer Girl", "author": {"firstname": "John", "lastname": "LeCarre"}, "genres": ["thriller", "spy"]},
+        {"title": "The Spy who came in from the cold", "author": {"firstname": "John", "lastname": "LeCarre"}, "genres": ["thriller", "spy"]},
+        {"title": "Dracula", "author": {"firstname": "Bram", "lastname": "Stoker"}, "genres": ["horror", "historical"]},
+        {"title": "Mute Witness", "author": {"firstname": "Robert L.", "lastname": "Pike"}, "genres": ["crime", "thriller"]}
+    ],
+    "genres": ["adventure", "horror", "thriller", "spy", "crime", "historical"],
+    "authors": [
+        {"author": {"firstname": "Stephen", "lastname": "King"}},
+        {"author": {"firstname": "Michael", "lastname": "Crichton"}},
+        {"author": {"firstname": "John", "lastname": "LeCarre"}},
+        {"author": {"firstname": "Bram", "lastname": "Stoker"}},
+        {"author": {"firstname": "Robert L.", "lastname": "Pike"}}
+    ]
+}

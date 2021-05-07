@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+
+.purple-widget {
+   @apply bg-purple-50 border-purple-200 border-2 rounded-t-lg
+}
+
+ .purple-widget div:first-of-type {
+    @apply bg-purple-100 p-3
+ }
+
+ .purple-widget div:last-of-type {
+    @apply p-3
+ }
+
+
+ .red-widget {
+   @apply bg-red-50 border-red-200 border-2 rounded-t-lg
+}
+
+ .red-widget div:first-of-type {
+    @apply bg-red-100 p-3
+ }
+
+ .red-widget div:last-of-type {
+    @apply p-3
+ }
+
+ .green-widget {
+   @apply bg-green-50 border-green-200 border-2 rounded-t-lg
+}
+
+ .green-widget div:first-of-type {
+    @apply bg-green-100 p-3
+ }
+
+ .green-widget div:last-of-type {
+    @apply p-3
+ }
+@tailwind utilities;
