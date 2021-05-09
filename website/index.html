@@ -4,19 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+    <title>Bookshop with a Vue</title>
+    <link rel="stylesheet" type="text/css" href="public/css/default.css" />
 </head>
 <body>
-    <div id="app">
-        <div>
-            <p>{{ testMessage }}</p>
-            <p>{{ books.length }}</p>
+    <div id="app" class="m-2">
+        <div class="p-2">
+            <div class="float-left">
+                <h1 class="text-3xl">Bookshop</h1>
+            </div>
+            <div class="float-left ml-6">
+                <shopping-basket-widget
+                    v-bind:shoppingbasket="shoppingbasket"
+                    v-on:clear-basket="onClearBasket"
+                ></shopping-basket-widget>
+            </div>
         </div>
+        <div class="clear-both"></div>
+        <div class="float-left">
+            <!-- genres -->
+            <div>
+                <div class="genres-widget">
+                    <p v-for="genre in sortedGenres" v-bind:genre="genre" class="capitalize">{{ genre }}</p>
+                </div>
+            </div>
 
-        <script type="text/javascript" src="public/vue/vue.min.js"></script>
-        <script type="text/javascript" src="public/axios/axios.min.js"></script>
-        <script type="text/javascript" src="public/app.js"></script>
+            <!-- authors -->
+            <div class="mt-2">
+                <authors-widget
+                    v-bind:authors="sortedAuthors"
+                ></authors-widget>
+            </div>
+        </div>
+        <div class="flex flex-wrap">
+            <book-widget 
+                v-for="book in sortedBooks" 
+                v-bind:book="book"
+                v-on:buy-book="onBuyBook"
+            ></book-widget>
+        </div>
     </div>
+    <script type="text/javascript" src="public/vue/vue.min.js"></script>
+    <script type="text/javascript" src="public/axios/axios.min.js"></script>
+    <script type="text/javascript" src="public/app.js"></script>
 </body>
 </html>
