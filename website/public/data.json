@@ -1,18 +1,25 @@
 {
     "books" : [
-        {"title": "The Stand", "author": {"firstname": "Stephen", "lastname": "King"}, "genres": ["horror", "thriller"]},
-        {"title": "Jurassic Park", "author": {"firstname": "Michael", "lastname": "Crichton"}, "genres": ["adventure", "science fiction"]},
-        {"title": "The Drummer Girl", "author": {"firstname": "John", "lastname": "LeCarre"}, "genres": ["thriller", "spy"]},
-        {"title": "The Spy who came in from the cold", "author": {"firstname": "John", "lastname": "LeCarre"}, "genres": ["thriller", "spy"]},
-        {"title": "Dracula", "author": {"firstname": "Bram", "lastname": "Stoker"}, "genres": ["horror", "historical"]},
-        {"title": "Mute Witness", "author": {"firstname": "Robert L.", "lastname": "Pike"}, "genres": ["crime", "thriller"]}
+        {"title": "The Stand", "price": 8.99, "author": {"firstname": "Stephen", "lastname": "King"}, "genres": ["horror", "thriller"]},
+        {"title": "Jurassic Park", "price": 8.99, "author": {"firstname": "Michael", "lastname": "Crichton"}, "genres": ["adventure", "science fiction"]},
+        {"title": "The Drummer Girl", "price": 8.99, "author": {"firstname": "John", "lastname": "LeCarre"}, "genres": ["thriller", "spy"]},
+        {"title": "The Spy who came in from the cold", "price": 8.99, "author": {"firstname": "John", "lastname": "LeCarre"}, "genres": ["thriller", "spy"]},
+        {"title": "Dracula", "price": 8.99, "author": {"firstname": "Bram", "lastname": "Stoker"}, "genres": ["horror", "historical"]},
+        {"title": "Mute Witness", "price": 8.99, "author": {"firstname": "Robert L.", "lastname": "Pike"}, "genres": ["crime", "thriller"]},
+        {"title": "Later", "price": 8.99, "author": {"firstname": "Stephen", "lastname": "King"}, "genres": ["horror", "thriller"]},        
+        {"title": "Thin Air", "price": 8.99, "author": {"firstname": "Michelle", "lastname": "Paver"}, "genres": ["supernatural", "thriller", "adventure"]}, 
+        {"title": "The Essex Snake", "price": 8.99, "author": {"firstname": "Sarah", "lastname": "Parry"}, "genres": ["historical", "thriller", "adventure"]},
+        {"title": "Station Eleven", "price": 8.99, "author": {"firstname": "Lauren", "lastname": "St John"}, "genres": ["historical", "thriller", "adventure"]}
     ],
-    "genres": ["adventure", "horror", "thriller", "spy", "crime", "historical"],
+    "genres": ["adventure", "horror", "thriller", "spy", "crime", "historical", "supernatural"],
     "authors": [
         {"author": {"firstname": "Stephen", "lastname": "King"}},
         {"author": {"firstname": "Michael", "lastname": "Crichton"}},
         {"author": {"firstname": "John", "lastname": "LeCarre"}},
         {"author": {"firstname": "Bram", "lastname": "Stoker"}},
-        {"author": {"firstname": "Robert L.", "lastname": "Pike"}}
+        {"author": {"firstname": "Robert L.", "lastname": "Pike"}},
+        {"author": {"firstname": "Lauren", "lastname": "St. John"}},
+        {"author": {"firstname": "Michelle", "lastname": "Paver"}},
+        {"author": {"firstname": "Sarah", "lastname": "Parry"}}
     ]
 }
