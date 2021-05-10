@@ -1,47 +1,7 @@
-Vue.component('book-widget', {
-    props: ['book'],
-    template: `
-      <div class="book-widget">
-        <div>
-            <h3 :title="book.title">{{ book.title }}</h3>
-            <p>{{ book.author.firstname}} {{ book.author.lastname}}</p>
-        </div>
-        <div class="float-left">
-            <p class="object-left=top" :title="book.title"><img src="/public/imgs/book-cover-default.jpg" /></p>
-        </div>
-        <div class="float-right m-2">
-            £{{ book.price }}<br/>
-            <button class='buy-button' v-on:click="$emit('buy-book', book)">Buy</button><br/>
-        </div>
-        <div class="clear-both bg-blue-200">
-            <span v-for="genre in book.genres" v-bind:genre="genre" class="genre-tag">{{ genre }} </span>
-        </div>
-      </div>
-    `
-  });
-
-  Vue.component('shopping-basket-widget', {
-    props: ['shoppingbasket'],
-    template: `
-        <div >
-            <p>
-            Items: {{ shoppingbasket.items.length }}
-            Total: £{{ shoppingbasket.total }}
-            <button v-on:click="$emit('clear-basket')">Clear</button>
-            </p>
-        </div>
-    `
-  });
-
-  Vue.component('authors-widget', {
-    props: ['authors'],
-    template: `
-        <div>
-            <p v-for="item in authors" >{{ item.author.firstname }} {{ item.author.lastname }}</p>
-        </div>
-    `
-  });
-
+import BookWidget from './components/BookWidget.js';
+import ShoppingBasket from './components/ShoppingBasket.js';
+import AuthorsWidget from './components/AuthorsWidget.js';
+import GenresWidget from './components/GenresWidget.js';
 
 let vm = new Vue({
     el: '#app',
@@ -52,8 +12,17 @@ let vm = new Vue({
         testMessage: 'This is a test',
         shoppingbasket: {
             items: [],
-            total: 0
-        }
+            total: 0,
+            currency: "£",
+            totalStr: "£0.00"
+        },
+        filteredGenres: []
+    },
+    components: {
+        'book-widget': BookWidget,
+        'shopping-basket': ShoppingBasket,
+        'author-widget': AuthorsWidget,
+        'genre-widget': GenresWidget
     },
     methods: {
         getData: function() {
@@ -73,20 +42,24 @@ let vm = new Vue({
                 
             });
         },
-        onBuyBook: function(obj) {
+        onAddToBasket: function(obj) {
             let item = {};
             item.book = obj;
             item.quantity = 1;
 
             this.shoppingbasket.total = this.shoppingbasket.total + obj.price;
+            this.shoppingbasket.totalStr = this.shoppingbasket.currency + this.shoppingbasket.total.toFixed(2);
 
             this.shoppingbasket.items.push(obj);
-            console.log("added to shopping basket");
         },
         onClearBasket: function() {
             this.shoppingbasket.items = [];
             this.shoppingbasket.total = 0;
-            console.log("Clear Shopping basket");
+            this.shoppingbasket.totalStr = this.shoppingbasket.currency + this.shoppingbasket.total.toFixed(2);
+        },
+        onFilterGenre: function(obj) {
+            this.filteredGenres.push(obj);
+            console.log({obj});
         }
     },
     mounted: function() {
@@ -95,8 +68,8 @@ let vm = new Vue({
     computed: {
         sortedAuthors: function() {
             return this.authors.sort((a,b) => {
-                if(a.lastname < b.lastname) return -1;
-                if(a.lastname > b.lastname) return 1;
+                if(a.author.lastname < b.author.lastname) return -1;
+                if(a.author.lastname > b.author.lastname) return 1;
                 return 0;
             });
         },
@@ -116,3 +89,5 @@ let vm = new Vue({
         }
     }
 })
+
+export default vm;
