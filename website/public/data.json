@@ -2,8 +2,8 @@
     "books" : [
         {"title": "The Stand", "price": 8.99, "author": {"firstname": "Stephen", "lastname": "King"}, "genres": ["horror", "thriller"]},
         {"title": "Jurassic Park", "price": 8.99, "author": {"firstname": "Michael", "lastname": "Crichton"}, "genres": ["adventure", "science fiction"]},
-        {"title": "The Drummer Girl", "price": 8.99, "author": {"firstname": "John", "lastname": "LeCarre"}, "genres": ["thriller", "spy"]},
-        {"title": "The Spy who came in from the cold", "price": 8.99, "author": {"firstname": "John", "lastname": "LeCarre"}, "genres": ["thriller", "spy"]},
+        {"title": "The Drummer Girl", "price": 8.99, "author": {"firstname": "John", "lastname": "le Carre"}, "genres": ["thriller", "spy"]},
+        {"title": "The Spy who came in from the cold", "price": 8.99, "author": {"firstname": "John", "lastname": "le Carre"}, "genres": ["thriller", "spy"]},
         {"title": "Dracula", "price": 8.99, "author": {"firstname": "Bram", "lastname": "Stoker"}, "genres": ["horror", "historical"]},
         {"title": "Mute Witness", "price": 8.99, "author": {"firstname": "Robert L.", "lastname": "Pike"}, "genres": ["crime", "thriller"]},
         {"title": "Later", "price": 8.99, "author": {"firstname": "Stephen", "lastname": "King"}, "genres": ["horror", "thriller"]},        
@@ -15,7 +15,7 @@
     "authors": [
         {"author": {"firstname": "Stephen", "lastname": "King"}},
         {"author": {"firstname": "Michael", "lastname": "Crichton"}},
-        {"author": {"firstname": "John", "lastname": "LeCarre"}},
+        {"author": {"firstname": "John", "lastname": "le Carre"}},
         {"author": {"firstname": "Bram", "lastname": "Stoker"}},
         {"author": {"firstname": "Robert L.", "lastname": "Pike"}},
         {"author": {"firstname": "Lauren", "lastname": "St. John"}},
